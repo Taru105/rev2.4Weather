@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: coral;
+}
+.main{
+    margin: auto;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 35rem;
+    background-color: rgb(197, 223, 245);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewWeatherApp</title>
+    <link rel="stylesheet" href="css/weatherDetails.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather:wght@300&family=Montserrat:wght@200&family=PT+Serif&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/3a2cd470dd.js" crossorigin="anonymous"></script>
+    
+    <!-- font format -->
+    <!-- font-family: 'Dancing Script', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Ubuntu Condensed', sans-serif; -->
+
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <!-- weatherPredictionDiv -->
+            <div class="row top">
+                <div class="left">
+                    <i class="icon fas fa-location-dot fa-2x"></i>
+                    <h2 class="City"><%= city %></h2> 
+                </div>
+                <div class="right">
+                    <h2><%= time %></h2>
+                    <h5><%= date %></h5>
+                </div>
+            </div>
+            <div class="weather"> 
+                <img src="<%= weatherImg %>" alt="ClearImg" class="weather-icon">
+                <h1 class="temp"><span style="color: black;">Temperature:</span><%= tmp %>°C</h1>               
+                <h4 class="City"><%= description %></h4>
+                <div class="details">
+                    <div class="col humid">
+                        <img src="images/humidity.png" alt="humidity">
+                        <div>
+                            <p class="humidity"><%= humidPercent %>%</p>
+                            <p class="humidText">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col wind">
+                        <img src="images/wind.png" alt="windSpeed">
+                        <div>
+                            <p class="windVel"><%= Speed %>Km/h</p>
+                            <p class="windText">WindSpeed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="check-more">
+                <form action="/weatherDetails" method="post">
+                    <button type="submit" name="submit">Check more</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

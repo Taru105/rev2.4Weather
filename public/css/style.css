@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background-color: rgb(179, 225, 254); */
+    background:linear-gradient(180deg,rgb(182, 236, 244),rgb(71, 210, 194),rgb(32, 203, 169),rgb(12, 209, 163));
+    background-repeat: no-repeat;
+}
+.left-most{
+    width: 5.5rem;
+    /* margin-right: 401px; */
+    margin-bottom: -23px;
+}
+.right-most{
+    width: 5.5rem;
+    margin-left: 401px;
+    margin-bottom: -5px;
+}
+.main{
+    margin: auto;
+    text-align: center; 
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+}
+.time{
+    text-align: center;
+    color: white;
+}
+.time h2{
+    font-size: 3rem;
+}
+.time span{
+    font-size: 1.5rem;
+}
+.main h2{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.hi h2{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Croissant One', cursive;
+}
+/* input field */
+.details input{
+    padding: 0.9rem;
+    width: 30rem;
+    border-radius: 30px;
+    border-style: none;
+}
+.details input:focus{
+    outline: none;
+}
+.details button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right:1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-style: none;
+    border-radius: 30px;
+    background:linear-gradient(95deg,black,rgb(46, 46, 46),rgb(103, 103, 103),rgb(159, 159, 159));
+    color: white;
+    font-family: 'Mooli', sans-serif;
+}
+
+.details button:hover{
+    background: linear-gradient(45deg,rgb(168, 225, 248),rgb(118, 189, 240),rgb(133, 133, 243),rgb(198, 102, 249)); 
+    color: black;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.details .search-bar{
+    background-color: #fff;
+    width: 35rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 0rem;
+    border-radius: 35px;
+}
+.details .search-bar img{
+    width: 26px;
+    cursor: pointer;
+}
+.details .search-bar img:hover{
+    width: 27px;
+    cursor: pointer;
+}
+/* media query for adjusting ui based on screen */
+@media screen and (max-width:600px){
+    .main{
+        padding-top: 10rem;
+        padding-bottom: 30rem;
+        padding-left: 5px;
+        padding-right: 5px;
+        overflow: hidden;
+        /* display: flex;
+        justify-content: center;
+        flex-direction: column; */
+    }
+    .main h2{
+        text-align: center;
+    }
+    .left-most{
+        margin-bottom: -100px;
+    }
+    .right-most{
+        visibility: hidden;
+    }
+    .details .search-bar{
+        width: 15rem;
+    }
+    .details input{
+        padding: 0.7rem;
+        width: 12.5rem;
+    }
+    .details .search-bar img{
+        width: 20px;
+    }
+    .details .search-bar img:hover{
+        width: 21px;
+    }
+}
